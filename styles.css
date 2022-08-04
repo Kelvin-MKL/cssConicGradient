@@ -1,0 +1,115 @@
+
+html {
+    background-color: grey;
+}
+.wrapper{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.conicGradient{
+    margin-right: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 60px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    mix-blend-mode: overlay;
+
+}
+
+.conicGradient span{
+    position: absolute;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    inset: 3px;
+    z-index: 1;
+    border-radius: 10px;
+    color: white;
+
+
+    
+}
+
+.conicGradient:before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(transparent, transparent, transparent, yellow);
+    animation: rotateBorder 4s linear infinite;
+    
+}
+
+.conicGradient:after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(transparent, transparent, transparent, red);
+    animation: rotateBorder 2s linear infinite;
+    animation-delay: -2s;
+}
+
+.conicGradient2{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    mix-blend-mode: overlay;
+}
+
+.conicGradient2::before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(transparent, transparent, transparent, rgb(197, 16, 233));
+    animation: rotateBorder 4s linear infinite;
+}
+
+.conicGradient2:after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(transparent, transparent, transparent, rgb(4, 166, 230));
+    animation: rotateBorder 4s linear infinite;
+    animation-delay: -6s;
+
+}
+
+.conicGradient2 span{
+    background-color: black;
+    inset: 3px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@keyframes rotateBorder {
+
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+
+
+}
